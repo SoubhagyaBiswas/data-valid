@@ -1,0 +1,31 @@
+{
+    "name": "data-valid",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "types": "index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "gulp clear && cross-env NODE_ENV=production rollup -c -m"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SoubhagyaBiswas/data-valid.git"
+    },
+    "keywords": [
+        "data",
+        "form",
+        "validation"
+    ],
+    "author": "Soubhagya Biswas",
+    "license": "MIT",
+    "description": "",
+    "contributors": [
+        "Soubhagya Biswas (https://github.com/SoubhagyaBiswas)"
+    ],
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^28.0.3",
+        "@rollup/plugin-node-resolve": "^16.0.1",
+        "rollup": "^4.40.1"
+    }
+}
