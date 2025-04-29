@@ -1,5 +1,6 @@
-
-<p align="center"><strong style="font-size: 2em;">data-valid</strong></p>
+<div align="center">
+   <a href="https://github.com/SoubhagyaBiswas/data-valid"><img width="250" src="https://github.com/user-attachments/assets/23564428-98db-4c15-907a-91464c40b75d" /></a><br>
+</div>
 
 <p align="center">
     A lightweight data validation library for JavaScript / Typescript.
