@@ -1,14 +1,12 @@
 
-<div align="center">
-   <h1>data-valid</h1>
-</div>
+<h1 align="center">data-valid</h1>
 
 <p align="center">
     A lightweight data validation library for JavaScript / Typescript.
 </p>
 
+<br/>
 
----
 
 ## Installing
 
@@ -70,8 +68,6 @@ If validation fails `validator.errors()` returns
 }
 ```
 
----
-
 ## Validator API
 
 ### `new Validator(rules)`
@@ -88,7 +84,6 @@ If validation fails `validator.errors()` returns
 ### `.errors()`
 - Returns an object with field names as keys and error messages as values.
 
----
 
 ## Supported Field Types
 
@@ -98,8 +93,6 @@ If validation fails `validator.errors()` returns
 | `email`   | Validates email format. |
 | `number`  | Validates numeric input. Supports minimum value (`min`). |
 | `boolean` | Validates boolean values (`true`/`false`). |
-
----
 
 ## Credits
 
