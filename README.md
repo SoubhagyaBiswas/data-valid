@@ -1,5 +1,5 @@
 
-<h1 align="center">data-valid</h1>
+<p align="center"><strong style="font-size: 2em;">data-valid</strong></p>
 
 <p align="center">
     A lightweight data validation library for JavaScript / Typescript.
