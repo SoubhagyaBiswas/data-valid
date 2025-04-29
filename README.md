@@ -1,51 +1,72 @@
-# data-valid
 
-A simple and lightweight data validation library for JavaScript.
+<div align="center">
+   <h1>data-valid</h1>
+</div>
 
-Validate objects against defined rules for `text`, `email`, `number`, and `boolean` fields.
+<p align="center">
+    A lightweight data validation library for JavaScript / Typescript.
+</p>
+
 
 ---
 
-## Installation
+## Installing
+
+### Package manager
+
+Using npm:
 
 ```bash
-npm install data-valid
+$ npm install data-valid
 ```
 
----
+Using yarn:
+
+```bash
+$ yarn add data-valid
+```
+
+Once the package is installed, you can import the library using `import` approach:
+
+```js
+import Validator from 'data-valid';
+```
 
 ## Example
 
-### 1. Define your data
-
 ```javascript
+import Validator from 'data-valid';
+
+// TAKING TEST DATA
 const data = {
     name: "Soubhagya Biswas",
     email: "soubhagyabiswas.work@gmail.com",
     age: 23,
-    lovesFood: true
+    isSubscribedToNewsletter: true
 };
-```
 
-### 2. Define your validation rules
-
-```javascript
-const rules = {
+// INITIALIZING THE VALIDATOR
+let validator = new Validator({
     name: ['required', 'min:3', 'max:20'],
     email: ['required', 'email'],
     age: ['required', 'number', 'min:18'],
-    lovesFood: ['boolean']
-};
+    isSubscribedToNewsletter: ['boolean']
+})
+
+// VALIDATE THE DATA BLOCK & CHECK VALIDITY
+if(!validator.validate(data).isValid()) {
+    console.error(validator.errors());
+}
 ```
 
-### 3. Validate
+
+If validation fails `validator.errors()` returns
 
 ```javascript
-let validator = new Validator(rules);
-validator.validate(data);
-
-if (!validator.isValid()) {
-    console.error(validator.errors());
+{
+    name: ["name must be at least 3 characters."],
+    email: ["email must be a valid email address."],
+    age: ["age must be at least 18."]
 }
 ```
 
@@ -80,20 +101,10 @@ if (!validator.isValid()) {
 
 ---
 
-## Example Error Output
+## Credits
 
-If validation fails:
-
-```javascript
-{
-  name: ["name must be at least 3 characters."],
-  email: ["email must be a valid email address."],
-  age: ["age must be at least 18."]
-}
-```
-
----
+`data-valid` is inspired by the [Validator](https://api.laravel.com/docs/12.x/Illuminate/Support/Facades/Validator.html) component from [Laravel](https://laravel.com). It aims to offer a simple, lightweight solution for data validation in JavaScript and TypeScript applications.
 
 ## License
 
-MIT
+[MIT](LICENSE)
