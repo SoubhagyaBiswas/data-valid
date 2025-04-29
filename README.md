@@ -14,7 +14,7 @@ npm install data-valid
 
 ---
 
-## Usage
+## Example
 
 ### 1. Define your data
 
@@ -31,25 +31,10 @@ const data = {
 
 ```javascript
 const rules = {
-    name: {
-        type: "text",     // default is text
-        required: true,
-        min: 3,
-        max: 20,
-    },
-    email: {
-        type: "email",    // type: email
-        required: true,
-    },
-    age: {
-        type: "number",   // type: number
-        required: true,
-        min: 18,
-    },
-    lovesFood: {
-        type: "boolean",  // type: boolean
-        required: false,
-    }
+    name: ['required', 'min:3', 'max:20'],
+    email: ['required', 'email'],
+    age: ['required', 'number', 'min:18'],
+    lovesFood: ['boolean']
 };
 ```
 
@@ -101,9 +86,9 @@ If validation fails:
 
 ```javascript
 {
-  name: "Name must be at least 3 characters.",
-  email: "Email must be a valid email address.",
-  age: "Age must be at least 18."
+  name: ["name must be at least 3 characters."],
+  email: ["email must be a valid email address."],
+  age: ["age must be at least 18."]
 }
 ```
 
