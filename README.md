@@ -1,5 +1,5 @@
 <div align="center">
-   <a href="https://github.com/SoubhagyaBiswas/data-valid"><img width="250" src="https://github.com/user-attachments/assets/23564428-98db-4c15-907a-91464c40b75d" /></a><br>
+   <a href="https://github.com/SoubhagyaBiswas/data-valid"><img width="250" src="https://raw.githubusercontent.com/SoubhagyaBiswas/data-valid/main/assets/logo.png" /></a><br>
 </div>
 
 <p align="center">
